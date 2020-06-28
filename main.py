@@ -4,11 +4,20 @@ from tools.bottle import get,post,run,request,template
 from tools.config_manager import config_manager
 import RPi.GPIO as GPIO
 
-base_uri="/control"
-root_uri=base_uri==""and "/" or base_uri
-
 is_login=False
 
+test_cfg = "./default.config"
+config=config_manager(test_cfg)
+ret=config.read()
+base_uri=config.conf_parser["USER"]["base_uri"]
+root_uri=base_uri==""and "/" or base_uri
+
+if ret==False:
+    print("Read config file error:%s"%(test_cfg))
+    sys.exit()
+
+
+#web route
 @get(root_uri)
 def index():
     return template("index")
@@ -58,15 +67,6 @@ def cmd():
             return "Not checked"
     else:
         return "Not checked"
-
-test_cfg = "./default.config"
-
-config=config_manager(test_cfg)
-ret=config.read()
-
-if ret==False:
-    print("Read config file error:%s"%(test_cfg))
-    sys.exit()
 
 
 config.write(test_cfg)

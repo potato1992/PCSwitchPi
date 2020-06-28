@@ -17,7 +17,7 @@
     　　　　var url = document.location.toString();
     　　　　var arrUrl = url.split("//");
     　　　　var start = arrUrl[1].indexOf("/");
-    　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+    　　　　var relUrl = arrUrl[1].substring(start);//get substring from start
     　　　　if(relUrl.indexOf("?") != -1){
     　　　　　　relUrl = relUrl.split("?")[0];
     　　　　}
@@ -25,11 +25,11 @@
     　　}
 
         window.onload=function(){
-            console.log("初始化页面触发js函数:我是页面加载完打印的bai");
+            console.log("Page load complete, initializing js...");
             funName()
         }
         var funName = function(){
-            console.log("初始化页面触发js函数:我是页面加载完,调用的");
+            console.log("Load funName");
             base_uri=get_url_relative_path();
         }
     </script>
