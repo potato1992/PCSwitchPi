@@ -69,7 +69,7 @@ if ret==False:
     sys.exit()
 
 
-config.write("./default.config")
+config.write(test_cfg)
 
 powerPin = config.conf_parser.getint('USER', 'power_pin')
 resetPin = config.conf_parser.getint('USER', 'reset_pin')
