@@ -8,6 +8,10 @@ Install required unities:<br/>
 ```bash
 pip3 install -r requirements.txt
 ```
+Run it:<br/>
+```bash
+python3 main.py
+```
 Web interface:<br/>
 ```
 ip:port/control
