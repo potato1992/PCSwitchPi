@@ -1,5 +1,5 @@
 # PCSwitchPi
-Control PC power using a raspberry pi through Web interface
+Control PC power buttons (power/reset/force power down) using a raspberry pi through Web interface
 
 This is a simple Python utility for Raspberry PI to press power or reset button on remote PC using a web interface. Power and Reset button pins of the controlled PC should be connected to Raspberry Pi GPIO port as the config file.
 
