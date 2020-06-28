@@ -19,7 +19,7 @@ eg:127.0.0.1:8081/control
 ```
 - Screenshot:
 <img src="doc/screenshot.png"><br/>
-Listenning ip/port, password, GPIO number for power_pin, reset_pin, status_pin can be changed in the default.config file.<br>
+Listening ip/port, password, GPIO number for power_pin, reset_pin, status_pin can be changed in the default.config file.<br>
 
 ## Connection schematics:<br/>
 Refer to <a href="https://github.com/xtensa/PyControlPC" title="PyControlPC">PyControlPC</a> by xtensa, similar connection configurations.<br>
