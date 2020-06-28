@@ -13,6 +13,7 @@ Web interface:<br/>
 ip:port/control
 eg:127.0.0.1:8081/control
 ```
+- Screenshot:
 <img src="doc/screenshot.png"><br/>
 Listenning ip/port, password, GPIO number for power_pin, reset_pin, status_pin can be changed in the default.config file.<br>
 
