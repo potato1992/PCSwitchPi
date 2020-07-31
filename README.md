@@ -22,4 +22,4 @@ eg:127.0.0.1:8081/control
 Listening ip/port, password, GPIO number for power_pin, reset_pin, status_pin, base_uri can be changed in the default.config file.<br>
 
 ## Connection schematics:<br/>
-Refer to <a href="https://github.com/xtensa/PyControlPC" title="PyControlPC">PyControlPC</a> by xtensa, similar connection configurations.<br>
+<img src="doc/schematics.png"><br/>
