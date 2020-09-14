@@ -1,0 +1,402 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 7874 5906
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5F237344
+P 2750 3150
+F 0 "R1" V 2543 3150 50  0000 C CNN
+F 1 "510" V 2634 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2680 3150 50  0001 C CNN
+F 3 "~" H 2750 3150 50  0001 C CNN
+	1    2750 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 3150 3200 3100
+Wire Wire Line
+	2900 3150 3200 3150
+$Comp
+L Isolator:PC817 U1
+U 1 1 5F232AA7
+P 3500 3200
+F 0 "U1" H 3500 3525 50  0000 C CNN
+F 1 "PC817" H 3500 3434 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 3300 3000 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 3500 3200 50  0001 L CNN
+	1    3500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDC #PWR02
+U 1 1 5F23F473
+P 4200 2600
+F 0 "#PWR02" H 4200 2500 50  0001 C CNN
+F 1 "VDC" H 4215 2773 50  0000 C CNN
+F 2 "" H 4200 2600 50  0001 C CNN
+F 3 "" H 4200 2600 50  0001 C CNN
+	1    4200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F23FEC5
+P 4200 2850
+F 0 "R2" H 4270 2896 50  0000 L CNN
+F 1 "5k1" H 4270 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 2850 50  0001 C CNN
+F 3 "~" H 4200 2850 50  0001 C CNN
+	1    4200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F24076E
+P 4150 3700
+F 0 "#PWR01" H 4150 3450 50  0001 C CNN
+F 1 "GND" H 4155 3527 50  0000 C CNN
+F 2 "" H 4150 3700 50  0001 C CNN
+F 3 "" H 4150 3700 50  0001 C CNN
+	1    4150 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3300 4150 3300
+Wire Wire Line
+	4150 3300 4150 3700
+Wire Wire Line
+	3800 3100 4200 3100
+Wire Wire Line
+	4200 3100 4200 3000
+Wire Wire Line
+	4200 2700 4200 2600
+Wire Wire Line
+	4200 3100 4750 3100
+Connection ~ 4200 3100
+Wire Wire Line
+	4750 3100 4750 3800
+Wire Wire Line
+	2600 3000 2600 3150
+Wire Wire Line
+	2450 3100 2450 3300
+Wire Wire Line
+	2450 3300 3200 3300
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 5F253A82
+P 1700 2800
+F 0 "J1" H 1808 3181 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1808 3090 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 1700 2800 50  0001 C CNN
+F 3 "~" H 1700 2800 50  0001 C CNN
+	1    1700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3000 2600 3000
+Wire Wire Line
+	1900 3100 2450 3100
+Text Notes 1450 3150 0    50   ~ 0
+LED-
+Text Notes 1450 3050 0    50   ~ 0
+LED-
+Text Notes 1150 2650 0    50   ~ 0
+Power swich+
+Text Notes 1150 2750 0    50   ~ 0
+Power swich-
+Text Notes 1150 2850 0    50   ~ 0
+Reset swich+
+Text Notes 1150 2950 0    50   ~ 0
+Reset swich+
+Wire Wire Line
+	3350 1350 3350 1450
+$Comp
+L Diode:1N4007 D1
+U 1 1 5F26076C
+P 3950 1050
+F 0 "D1" V 3904 1130 50  0000 L CNN
+F 1 "1N4007" V 3995 1130 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3950 875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3950 1050 50  0001 C CNN
+	1    3950 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D2
+U 1 1 5F26177E
+P 3950 1950
+F 0 "D2" V 3996 1870 50  0000 R CNN
+F 1 "1N4007" V 3905 1870 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3950 1775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3950 1950 50  0001 C CNN
+	1    3950 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 1600 3950 1600
+Wire Wire Line
+	3950 1600 3950 1800
+Wire Wire Line
+	3950 2100 3950 2200
+Wire Wire Line
+	3950 2200 3350 2200
+Wire Wire Line
+	3950 1200 3950 1600
+Connection ~ 3950 1600
+Wire Wire Line
+	3950 900  3950 750 
+Wire Wire Line
+	3950 750  3350 750 
+Wire Wire Line
+	2850 750  2150 750 
+Wire Wire Line
+	2150 750  2150 2600
+Wire Wire Line
+	2150 2600 1900 2600
+Wire Wire Line
+	1900 2700 2300 2700
+Wire Wire Line
+	2300 2700 2300 1350
+Wire Wire Line
+	2300 1350 2950 1350
+Wire Wire Line
+	1900 2800 2450 2800
+Wire Wire Line
+	2450 2800 2450 1600
+Wire Wire Line
+	2450 1600 2950 1600
+Wire Wire Line
+	2850 2200 2850 2900
+Wire Wire Line
+	2850 2900 1900 2900
+$Comp
+L power:GND #PWR0101
+U 1 1 5F26C069
+P 3100 1450
+F 0 "#PWR0101" H 3100 1200 50  0001 C CNN
+F 1 "GND" H 3105 1277 50  0000 C CNN
+F 2 "" H 3100 1450 50  0001 C CNN
+F 3 "" H 3100 1450 50  0001 C CNN
+	1    3100 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1450 3350 1450
+Connection ~ 3350 1450
+Wire Wire Line
+	3350 1450 3350 1600
+$Comp
+L Transistor_BJT:S8050 Q1
+U 1 1 5F26D1E1
+P 4750 1150
+F 0 "Q1" H 4941 1104 50  0000 L CNN
+F 1 "S8050" H 4941 1195 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1075 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1150 50  0001 L CNN
+	1    4750 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:S8050 Q2
+U 1 1 5F270436
+P 4750 1900
+F 0 "Q2" H 4941 1946 50  0000 L CNN
+F 1 "S8050" H 4941 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1825 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1900 50  0001 L CNN
+	1    4750 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2100 4650 2200
+Wire Wire Line
+	4650 2200 3950 2200
+Connection ~ 3950 2200
+Wire Wire Line
+	4650 1700 4650 1500
+Wire Wire Line
+	4650 950  4650 750 
+Wire Wire Line
+	4650 750  3950 750 
+Connection ~ 3950 750 
+$Comp
+L power:VDC #PWR0102
+U 1 1 5F27A30A
+P 4250 1500
+F 0 "#PWR0102" H 4250 1400 50  0001 C CNN
+F 1 "VDC" H 4265 1673 50  0000 C CNN
+F 2 "" H 4250 1500 50  0001 C CNN
+F 3 "" H 4250 1500 50  0001 C CNN
+	1    4250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1500 4650 1500
+Connection ~ 4650 1500
+Wire Wire Line
+	4650 1500 4650 1350
+$Comp
+L power:VDC #PWR0103
+U 1 1 5F27ECA8
+P 5350 3400
+F 0 "#PWR0103" H 5350 3300 50  0001 C CNN
+F 1 "VDC" H 5365 3573 50  0000 C CNN
+F 2 "" H 5350 3400 50  0001 C CNN
+F 3 "" H 5350 3400 50  0001 C CNN
+	1    5350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F27F45D
+P 5600 3250
+F 0 "#PWR0104" H 5600 3000 50  0001 C CNN
+F 1 "GND" H 5605 3077 50  0000 C CNN
+F 2 "" H 5600 3250 50  0001 C CNN
+F 3 "" H 5600 3250 50  0001 C CNN
+	1    5600 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3400 5350 3500
+Text Notes 6050 3400 0    50   ~ 0
+GND
+Text Notes 6050 3500 0    50   ~ 0
+3.3-5v
+Text Notes 6050 3600 0    50   ~ 0
+pin_power
+Text Notes 6050 3700 0    50   ~ 0
+pin_reset
+Text Notes 6050 3800 0    50   ~ 0
+pin_led
+Wire Wire Line
+	5800 3250 5800 3400
+Wire Wire Line
+	5600 3250 5800 3250
+Wire Wire Line
+	5800 3700 4950 3700
+Wire Wire Line
+	4750 3800 5800 3800
+$Comp
+L Connector:Conn_01x05_Male J2
+U 1 1 5F28DB9D
+P 6000 3600
+F 0 "J2" H 6100 3350 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 5972 3927 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 6000 3600 50  0001 C CNN
+F 3 "~" H 6000 3600 50  0001 C CNN
+	1    6000 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:G5LE-1 K1
+U 1 1 5F2AA346
+P 3150 1050
+F 0 "K1" H 2720 1096 50  0000 R CNN
+F 1 "G5LE-1" H 2720 1005 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 3600 1000 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 3150 1050 50  0001 C CNN
+	1    3150 1050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:G5LE-1 K2
+U 1 1 5F2AB8B7
+P 3150 1900
+F 0 "K2" H 2720 1854 50  0000 R CNN
+F 1 "G5LE-1" H 2720 1945 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 3600 1850 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 3150 1900 50  0001 C CNN
+	1    3150 1900
+	-1   0    0    1   
+$EndComp
+Connection ~ 3350 1600
+Text Notes 3550 5150 0    50   ~ 0
+PyControlPC By Zhitao Lyu
+Text Notes 4300 5300 0    50   ~ 0
+July 30, 2020
+$Comp
+L Device:R R3
+U 1 1 5F23AF09
+P 4950 2850
+F 0 "R3" H 5020 2896 50  0000 L CNN
+F 1 "1k" H 5020 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 2850 50  0001 C CNN
+F 3 "~" H 4950 2850 50  0001 C CNN
+	1    4950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F23C70E
+P 5200 2850
+F 0 "R4" H 5270 2896 50  0000 L CNN
+F 1 "1k" H 5270 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 2850 50  0001 C CNN
+F 3 "~" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1900 4950 2700
+Wire Wire Line
+	4950 3000 4950 3700
+Wire Wire Line
+	5200 3000 5200 3600
+Wire Wire Line
+	5200 3600 5800 3600
+Wire Wire Line
+	5200 2700 5200 1150
+Wire Wire Line
+	4950 1150 5200 1150
+$Comp
+L Device:LED D3
+U 1 1 5F241AE1
+P 5750 2650
+F 0 "D3" H 5743 2867 50  0000 C CNN
+F 1 "LED" H 5743 2776 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5750 2650 50  0001 C CNN
+F 3 "~" H 5750 2650 50  0001 C CNN
+	1    5750 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3500 5500 3500
+$Comp
+L Device:R R5
+U 1 1 5F26076A
+P 5500 2900
+F 0 "R5" H 5570 2946 50  0000 L CNN
+F 1 "1k" H 5570 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5430 2900 50  0001 C CNN
+F 3 "~" H 5500 2900 50  0001 C CNN
+	1    5500 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 2750
+Wire Wire Line
+	5500 3050 5500 3500
+Connection ~ 5500 3500
+Wire Wire Line
+	5500 3500 5800 3500
+Wire Wire Line
+	5900 2650 5900 3250
+Wire Wire Line
+	5900 3250 5800 3250
+Connection ~ 5800 3250
+$EndSCHEMATC
