@@ -197,28 +197,6 @@ Wire Wire Line
 Connection ~ 3350 1450
 Wire Wire Line
 	3350 1450 3350 1600
-$Comp
-L Transistor_BJT:S8050 Q1
-U 1 1 5F26D1E1
-P 4750 1150
-F 0 "Q1" H 4941 1104 50  0000 L CNN
-F 1 "S8050" H 4941 1195 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1075 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1150 50  0001 L CNN
-	1    4750 1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:S8050 Q2
-U 1 1 5F270436
-P 4750 1900
-F 0 "Q2" H 4941 1946 50  0000 L CNN
-F 1 "S8050" H 4941 1855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1825 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1900 50  0001 L CNN
-	1    4750 1900
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4650 2100 4650 2200
 Wire Wire Line
@@ -273,8 +251,6 @@ Wire Wire Line
 	5350 3400 5350 3500
 Text Notes 6050 3400 0    50   ~ 0
 GND
-Text Notes 6050 3500 0    50   ~ 0
-3.3-5v
 Text Notes 6050 3600 0    50   ~ 0
 pin_power
 Text Notes 6050 3700 0    50   ~ 0
@@ -285,8 +261,6 @@ Wire Wire Line
 	5800 3250 5800 3400
 Wire Wire Line
 	5600 3250 5800 3250
-Wire Wire Line
-	5350 3500 5500 3500
 Wire Wire Line
 	5800 3700 4950 3700
 Wire Wire Line
@@ -329,28 +303,6 @@ Text Notes 3550 5150 0    50   ~ 0
 PyControlPC By Zhitao Lyu
 Text Notes 4300 5300 0    50   ~ 0
 July 30, 2020
-$Comp
-L Device:R R3
-U 1 1 5F23AF09
-P 4950 2850
-F 0 "R3" H 5020 2896 50  0000 L CNN
-F 1 "1k" H 5020 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 2850 50  0001 C CNN
-F 3 "~" H 4950 2850 50  0001 C CNN
-	1    4950 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5F23C70E
-P 5200 2850
-F 0 "R4" H 5270 2896 50  0000 L CNN
-F 1 "1k" H 5270 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 2850 50  0001 C CNN
-F 3 "~" H 5200 2850 50  0001 C CNN
-	1    5200 2850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4950 1900 4950 2700
 Wire Wire Line
@@ -366,24 +318,85 @@ Wire Wire Line
 $Comp
 L Device:LED D3
 U 1 1 5F241AE1
-P 5750 2850
-F 0 "D3" H 5743 3067 50  0000 C CNN
-F 1 "LED" H 5743 2976 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 5750 2850 50  0001 C CNN
-F 3 "~" H 5750 2850 50  0001 C CNN
-	1    5750 2850
+P 5750 2650
+F 0 "D3" H 5743 2867 50  0000 C CNN
+F 1 "LED" H 5743 2776 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5750 2650 50  0001 C CNN
+F 3 "~" H 5750 2650 50  0001 C CNN
+	1    5750 2650
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 2850 5500 2850
+	5350 3500 5500 3500
+$Comp
+L Device:R R5
+U 1 1 5F26076A
+P 5500 2900
+F 0 "R5" H 5570 2946 50  0000 L CNN
+F 1 "1k" H 5570 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5430 2900 50  0001 C CNN
+F 3 "~" H 5500 2900 50  0001 C CNN
+	1    5500 2900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5500 2850 5500 3500
+	5600 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 2750
+Wire Wire Line
+	5500 3050 5500 3500
 Connection ~ 5500 3500
 Wire Wire Line
 	5500 3500 5800 3500
 Wire Wire Line
-	5900 2850 5900 3250
+	5900 2650 5900 3250
 Wire Wire Line
 	5900 3250 5800 3250
 Connection ~ 5800 3250
+Text Notes 6050 3500 0    50   ~ 0
+3.3v
+$Comp
+L Device:R R4
+U 1 1 5F23C70E
+P 5200 2850
+F 0 "R4" H 5270 2896 50  0000 L CNN
+F 1 "200" H 5270 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 2850 50  0001 C CNN
+F 3 "~" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F23AF09
+P 4950 2850
+F 0 "R3" H 5020 2896 50  0000 L CNN
+F 1 "200" H 5020 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 2850 50  0001 C CNN
+F 3 "~" H 4950 2850 50  0001 C CNN
+	1    4950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:S8550 Q1
+U 1 1 5FC4F901
+P 4750 1150
+F 0 "Q1" H 4941 1196 50  0000 L CNN
+F 1 "S8550" H 4941 1105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1075 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8550.pdf" H 4750 1150 50  0001 L CNN
+	1    4750 1150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:S8550 Q2
+U 1 1 5FC5309C
+P 4750 1900
+F 0 "Q2" H 4941 1854 50  0000 L CNN
+F 1 "S8550" H 4941 1945 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1825 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8550.pdf" H 4750 1900 50  0001 L CNN
+	1    4750 1900
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

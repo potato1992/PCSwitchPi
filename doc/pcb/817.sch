@@ -120,8 +120,6 @@ Text Notes 1150 2850 0    50   ~ 0
 Reset swich+
 Text Notes 1150 2950 0    50   ~ 0
 Reset swich+
-Wire Wire Line
-	3350 1350 3350 1450
 $Comp
 L Diode:1N4007 D1
 U 1 1 5F26076C
@@ -131,7 +129,7 @@ F 1 "1N4007" V 3995 1130 50  0000 L CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3950 875 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3950 1050 50  0001 C CNN
 	1    3950 1050
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L Diode:1N4007 D2
@@ -142,7 +140,7 @@ F 1 "1N4007" V 3905 1870 50  0000 R CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3950 1775 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3950 1950 50  0001 C CNN
 	1    3950 1950
-	0    -1   -1   0   
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3350 1600 3950 1600
@@ -181,44 +179,6 @@ Wire Wire Line
 	2850 2200 2850 2900
 Wire Wire Line
 	2850 2900 1900 2900
-$Comp
-L power:GND #PWR0101
-U 1 1 5F26C069
-P 3100 1450
-F 0 "#PWR0101" H 3100 1200 50  0001 C CNN
-F 1 "GND" H 3105 1277 50  0000 C CNN
-F 2 "" H 3100 1450 50  0001 C CNN
-F 3 "" H 3100 1450 50  0001 C CNN
-	1    3100 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3100 1450 3350 1450
-Connection ~ 3350 1450
-Wire Wire Line
-	3350 1450 3350 1600
-$Comp
-L Transistor_BJT:S8050 Q1
-U 1 1 5F26D1E1
-P 4750 1150
-F 0 "Q1" H 4941 1104 50  0000 L CNN
-F 1 "S8050" H 4941 1195 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1075 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1150 50  0001 L CNN
-	1    4750 1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:S8050 Q2
-U 1 1 5F270436
-P 4750 1900
-F 0 "Q2" H 4941 1946 50  0000 L CNN
-F 1 "S8050" H 4941 1855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1825 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4750 1900 50  0001 L CNN
-	1    4750 1900
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4650 2100 4650 2200
 Wire Wire Line
@@ -231,17 +191,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 750  3950 750 
 Connection ~ 3950 750 
-$Comp
-L power:VDC #PWR0102
-U 1 1 5F27A30A
-P 4250 1500
-F 0 "#PWR0102" H 4250 1400 50  0001 C CNN
-F 1 "VDC" H 4265 1673 50  0000 C CNN
-F 2 "" H 4250 1500 50  0001 C CNN
-F 3 "" H 4250 1500 50  0001 C CNN
-	1    4250 1500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4250 1500 4650 1500
 Connection ~ 4650 1500
@@ -273,8 +222,6 @@ Wire Wire Line
 	5350 3400 5350 3500
 Text Notes 6050 3400 0    50   ~ 0
 GND
-Text Notes 6050 3500 0    50   ~ 0
-3.3-5v
 Text Notes 6050 3600 0    50   ~ 0
 pin_power
 Text Notes 6050 3700 0    50   ~ 0
@@ -327,28 +274,6 @@ Text Notes 3550 5150 0    50   ~ 0
 PyControlPC By Zhitao Lyu
 Text Notes 4300 5300 0    50   ~ 0
 July 30, 2020
-$Comp
-L Device:R R3
-U 1 1 5F23AF09
-P 4950 2850
-F 0 "R3" H 5020 2896 50  0000 L CNN
-F 1 "1k" H 5020 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 2850 50  0001 C CNN
-F 3 "~" H 4950 2850 50  0001 C CNN
-	1    4950 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5F23C70E
-P 5200 2850
-F 0 "R4" H 5270 2896 50  0000 L CNN
-F 1 "1k" H 5270 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 2850 50  0001 C CNN
-F 3 "~" H 5200 2850 50  0001 C CNN
-	1    5200 2850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4950 1900 4950 2700
 Wire Wire Line
@@ -399,4 +324,79 @@ Wire Wire Line
 Wire Wire Line
 	5900 3250 5800 3250
 Connection ~ 5800 3250
+Text Notes 6050 3500 0    50   ~ 0
+3.3v
+$Comp
+L Device:R R4
+U 1 1 5F23C70E
+P 5200 2850
+F 0 "R4" H 5270 2896 50  0000 L CNN
+F 1 "200" H 5270 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 2850 50  0001 C CNN
+F 3 "~" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F23AF09
+P 4950 2850
+F 0 "R3" H 5020 2896 50  0000 L CNN
+F 1 "200" H 5020 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 2850 50  0001 C CNN
+F 3 "~" H 4950 2850 50  0001 C CNN
+	1    4950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:S8550 Q1
+U 1 1 5FC4F901
+P 4750 1150
+F 0 "Q1" H 4941 1104 50  0000 L CNN
+F 1 "S8550" H 4941 1195 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1075 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8550.pdf" H 4750 1150 50  0001 L CNN
+	1    4750 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:S8550 Q2
+U 1 1 5FC5309C
+P 4750 1900
+F 0 "Q2" H 4941 1946 50  0000 L CNN
+F 1 "S8550" H 4941 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 1825 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8550.pdf" H 4750 1900 50  0001 L CNN
+	1    4750 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1350 3350 1500
+$Comp
+L power:VDC #PWR?
+U 1 1 5FC6CDD9
+P 3150 1500
+F 0 "#PWR?" H 3150 1400 50  0001 C CNN
+F 1 "VDC" H 3165 1673 50  0000 C CNN
+F 2 "" H 3150 1500 50  0001 C CNN
+F 3 "" H 3150 1500 50  0001 C CNN
+	1    3150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FC6DAEF
+P 4250 1500
+F 0 "#PWR?" H 4250 1250 50  0001 C CNN
+F 1 "GND" H 4255 1327 50  0000 C CNN
+F 2 "" H 4250 1500 50  0001 C CNN
+F 3 "" H 4250 1500 50  0001 C CNN
+	1    4250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1500 3350 1500
+Connection ~ 3350 1500
+Wire Wire Line
+	3350 1500 3350 1600
 $EndSCHEMATC
